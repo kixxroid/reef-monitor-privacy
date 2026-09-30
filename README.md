@@ -1,5 +1,5 @@
-# Reef Monitor Privacy Policy
+# Reef Memo Privacy Policy
 
-Reef Monitorのプライバシーポリシー公開用サイトです。
+Reef Memoのプライバシーポリシー公開用サイトです。
 
 公開URL: https://kixxroid.github.io/reef-monitor-privacy/
