@@ -1,0 +1,227 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>サポート | Reef Memo</title><meta name="description" content="Reef Memoの使い方とお問い合わせ。水質・写真・ICP検査の記録をサポートします。"><style>
+    :root {
+      color-scheme: light dark;
+      --canvas: #f2f8f7;
+      --surface: rgba(255, 255, 255, 0.86);
+      --surface-strong: #ffffff;
+      --ink: #173236;
+      --muted: #557176;
+      --brand: #075d68;
+      --brand-soft: #d7efec;
+      --line: #c9dedb;
+      --shadow: 0 18px 50px rgba(18, 67, 72, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --canvas: #0c1719;
+        --surface: rgba(18, 35, 38, 0.9);
+        --surface-strong: #122326;
+        --ink: #e7f2f0;
+        --muted: #a8bfbc;
+        --brand: #75d6d1;
+        --brand-soft: #173b3d;
+        --line: #29494b;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--canvas);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% -10%, color-mix(in srgb, var(--brand-soft) 72%, transparent), transparent 32rem),
+        var(--canvas);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+      font-size: 16px;
+      line-height: 1.82;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--brand);
+      text-underline-offset: 0.18em;
+      text-decoration-thickness: 0.08em;
+    }
+
+    a:hover { text-decoration-thickness: 0.14em; }
+
+    a:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--brand) 45%, transparent);
+      outline-offset: 4px;
+      border-radius: 3px;
+    }
+
+    .site-header {
+      width: min(100% - 32px, 760px);
+      margin: 0 auto;
+      padding: 28px 0 14px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      color: var(--brand);
+      background: var(--brand-soft);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .brand-mark svg { width: 20px; height: 20px; }
+
+    main {
+      width: min(100% - 32px, 760px);
+      margin: 0 auto 64px;
+    }
+
+    .intro {
+      margin: 10px 0 20px;
+      padding: clamp(28px, 7vw, 54px);
+      overflow: hidden;
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--brand);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 8vw, 3.7rem);
+      line-height: 1.18;
+      letter-spacing: -0.035em;
+    }
+
+    .lead {
+      max-width: 34rem;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.12rem);
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 6px 12px;
+      color: var(--brand);
+      background: var(--brand-soft);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .summary-item {
+      padding: 17px 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .summary-item strong {
+      display: block;
+      color: var(--brand);
+      font-size: 0.92rem;
+    }
+
+    .summary-item span {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      line-height: 1.45;
+    }
+
+    article {
+      padding: clamp(24px, 6vw, 48px);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+    }
+
+    section + section {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 11px;
+      font-size: 1.22rem;
+      line-height: 1.45;
+      letter-spacing: -0.012em;
+    }
+
+    p { margin: 0; }
+    p + p { margin-top: 12px; }
+
+    ul {
+      margin: 12px 0 0;
+      padding-left: 1.4em;
+    }
+
+    li + li { margin-top: 7px; }
+
+    .contact {
+      margin-top: 16px;
+      padding: 16px 18px;
+      background: var(--brand-soft);
+      border-radius: 14px;
+    }
+
+    footer {
+      width: min(100% - 32px, 760px);
+      margin: -36px auto 40px;
+      color: var(--muted);
+      font-size: 0.76rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .summary { grid-template-columns: 1fr; }
+      .summary-item { text-align: left; }
+      .summary-item strong, .summary-item span { display: inline; }
+      .summary-item span::before { content: " — "; }
+      .intro { border-radius: 22px; }
+      article { border-radius: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style></head><body><header class="site-header"><a class="brand" href="./">Reef Memo</a><a href="./">プライバシーポリシー</a></header><main><div class="intro"><p class="eyebrow">Reef Memo Support</p><h1>水槽の記録を、<br>毎日の習慣に。</h1><p class="lead">Reef Memoは、水質・添加剤・写真・ICP検査結果を水槽ごとに記録するiPhoneアプリです。</p><div class="updated">対応環境：iOS 17以降 ／ 最終更新：2026年10月1日</div></div><article><section><h2>お問い合わせ</h2><p>ご質問や不具合のご連絡は、下記のメールアドレスへお送りください。</p><p class="contact"><a href="mailto:lumera.studio.support@gmail.com?subject=Reef%20Memo%20Support">lumera.studio.support@gmail.com</a></p><ul><li>件名に「Reef Memo」とご用件をご記載ください。</li><li>不具合の場合は、iPhoneの機種、iOSとアプリのバージョン、発生する操作をお知らせください。</li><li>画像を添付する場合は、氏名などの個人情報が写っていないかご確認ください。</li></ul></section><section><h2>はじめて使うとき</h2><p>最初に水槽を作成し、ホームの「水質を記録」から測定値とメモを保存できます。複数の水槽は、ホームや設定から切り替えられます。目標水質は設定画面で変更できます。</p></section><section><h2>記録データについて</h2><p>水槽や水質、写真、検査結果は端末内に保存されます。アプリの削除や水槽の削除で記録が失われるため、不具合の際も、必要な記録がある状態でアプリを削除する前にお問い合わせください。</p></section><section><h2>写真・カメラについて</h2><p>写真ライブラリから選んだ画像やカメラで撮影した写真を登録できます。カメラが使えない場合は、iPhoneの「設定」でReef Memoのカメラ利用許可をご確認ください。取り込んだ写真の撮影日は、写真の詳細画面で変更できます。</p></section><section><h2>ICP検査結果を読み込めないとき</h2><p>PDFや画像を選択し、読み取り結果を確認してから保存してください。帳票の形式や画像の状態によっては読み取れない項目があります。原本と照合して値と単位を確認し、必要に応じて修正してください。</p><p>ファイルの上限は25 MiB、PDFは20ページです。iCloud上のファイルは、ダウンロードできる通信環境でお試しください。</p></section><section><h2>プライバシー</h2><p>アプリ内の記録データを開発者のサーバーへ送信する機能や、広告・解析SDKはありません。詳しくは<a href="./">プライバシーポリシー</a>をご覧ください。</p></section></article></main><footer><p>&copy; 2026 Lumera Studio. All rights reserved.</p></footer></body></html>
